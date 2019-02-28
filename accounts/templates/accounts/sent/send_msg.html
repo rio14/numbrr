@@ -1,0 +1,48 @@
+{% extends 'layouts/default/page.html' %}
+
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block content %}
+    <div class="col-lg-6">
+    <h4>{% trans 'Send Message To Customer' %}</h4>
+    <form method="post">
+        {% csrf_token %}
+    <div class="form-group">
+      <label for="comment">Message body:</label>
+      <textarea class="form-control"
+        placeholder="write only 160 words"
+        name='body'
+        maxlength=160
+        rows="3" id="comment"></textarea>
+    </div>
+    <!-- <div class="form-group">
+    <label for="sel1">Select Area:</label>
+    <select class="form-control" id="sel12" name='area'>
+          <option value="1">sellect all</option>
+          {% for a in area%}
+          <option value="{{a.area}}">{{a.area}}</option>
+          {% endfor %}
+        </select>
+      </div> -->
+      <div class="form-group">
+      <label for="sel1">Select Branch</label>
+      <select class="form-control" id="sel1" name='subarea'>
+          <option value="1">sellect all</option>
+          {% for a in area%}
+          <option value="{{a}}">{{a}}</option>
+          {% endfor %}
+        </select>
+      </div>
+        <button onclick="myFunction()" class="btn btn-primary">{% trans 'Send' %}</button>
+
+    </form>
+</div>
+    <hr>
+    <script>
+function myFunction() {
+
+  confirm("do you want to send " + document.getElementById("comment").value+ " to all the Customer from " +document.getElementById("sel1").value+ " area");
+}
+</script>
+{% endblock %}

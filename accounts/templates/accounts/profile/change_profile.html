@@ -1,0 +1,28 @@
+{% extends 'layouts/default/page.html' %}
+
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block content %}
+{% if messages %}
+<ul class="messages">
+    {% for msg in messages %}
+    <li>
+        <div class="alert alert-{{msg.level_tag}}" role="alert">
+        {{msg.message}}
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+    <h4>{% trans 'Change profile' %}</h4>
+
+    <form method="post">
+
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <button class="btn btn-success">{% trans 'Change' %}</button>
+
+    </form>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+Content-Type: multipart/alternative;
+ boundary="===============5612253291387304373=="
+MIME-Version: 1.0
+Subject: Profile activation
+From: test@example.com
+To: sagar@gmail.com
+Date: Thu, 21 Feb 2019 09:11:19 -0000
+Message-ID: <155074027921.17411.4556279469874736574@ritesh.domain.name>
+
+--===============5612253291387304373==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+
+
+To activate your profile, please follow this link:
+
+http://localhost:8000/accounts/activate/LEPxQAROSt3k7AHslzCR/
+
+--===============5612253291387304373==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Profile activation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+
+<p>
+    To activate your profile, please follow this link:
+</p>
+
+<p>
+    <a href="http://localhost:8000/accounts/activate/LEPxQAROSt3k7AHslzCR/">http://localhost:8000/accounts/activate/LEPxQAROSt3k7AHslzCR/</a>
+</p>
+
+</body>
+
+</html>
+
+--===============5612253291387304373==--
+
+-------------------------------------------------------------------------------

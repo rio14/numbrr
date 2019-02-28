@@ -1,0 +1,35 @@
+{% extends 'layouts/default/page.html' %}
+
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block content %}
+<div class="col-lg-6">
+  <h4>{% trans 'Add Customer' %}</h4>
+
+  <form method="post">
+
+    {% csrf_token %}
+    <div class="form-group"><label for="id_name">First name</label><input type="text" name="name" maxlength="30" class="form-control" placeholder="First name" title="" id="id_name" /></div>
+    <div class="form-group"><label for="id_email">Email</label><input type="email" name="email" class="form-control" placeholder="Email" title="" id="id_email" /></div>
+    <div class="form-group"><label for="id_mobile">Mobile No</label><input type="number" name="mobile" class="form-control" placeholder="Mobile No" title="" required id="id_mobile" /></div>
+    <div class="form-group"><label for="id_dob">Date Of Birth</label><input type="date" name="dob" class="form-control" placeholder="Date Of Birth" title="" id="id_dob" /></div>
+    <div class="form-group"><label for="id_ani">Date Of Aniversery</label><input type="date" name="ani" class="form-control" placeholder="Date Of Aniversery" title="" id="id_ani" /></div>
+    <div class="form-group"><label for="id_area">Branch</label>
+      <!-- <input type="text" name="area" maxlength="255" class="form-control" placeholder="Area" title="" value="{{area}}" id="id_area" /></div> -->
+    <!-- <div class="form-group"><label for="id_city">City</label><input type="text" name="city" maxlength="255" class="form-control" placeholder="City" title="" id="id_city" /></div> -->
+    <select class="form-control" name='area'>
+              <option>Select Branch</option>
+              {%for a in area %}
+                <option value="{{a}}">{{a}}</option>
+              {%endfor%}
+            </select>
+    <!-- <div class="form-group"><label for="id_subarea">Sub area</label><input type="text" name="subarea" maxlength="255" class="form-control" placeholder="Sub area" title="" id="id_subarea" /></div> -->
+    <br>
+    <button class="btn btn-primary">{% trans 'Add' %}</button>
+
+  </form>
+</div>
+<hr>
+
+{% endblock %}
